@@ -17,3 +17,6 @@ install:
 before_build:
   - node --version
   - npm --version
+
+build:
+  project: C:/projects/anitomy-node/build/binding.sln
