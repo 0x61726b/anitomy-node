@@ -15,6 +15,7 @@ matrix:
   include:
     - os: osx
       compiler: clang
+      language: node_js
       node_js:
         - "stable"
       before_install:
