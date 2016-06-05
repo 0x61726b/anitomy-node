@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/arkenthera/anitomy-node.svg?branch=master)](https://travis-ci.org/arkenthera/anitomy-node)
+[![Build status](https://ci.appveyor.com/api/projects/status/3tsgh93gd5sd6mrb?svg=true)](https://ci.appveyor.com/project/arkenthera/anitomy-node)
 [![Dependency Status](https://david-dm.org/arkenthera/anitomy-node.svg)](https://david-dm.org/arkenthera/anitomy-node)
 
 #Anitomy-Node
