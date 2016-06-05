@@ -32,6 +32,15 @@
             "defines!":[
                 '_HAS_EXPECTIONS=0'
             ],
+            'conditions':[
+                ['OS=="mac"', {
+                  'xcode_settings': {
+                        'MACOSX_DEPLOYMENT_TARGET': '10.8',
+                        'OTHER_CPLUSPLUSFLAGS' : ['-stdlib=libc++'],
+                    }
+                },
+            ]
+            ],
             "variables":{
                 "CURRENT_DIR":"<!(echo %~dp0)"
             },
