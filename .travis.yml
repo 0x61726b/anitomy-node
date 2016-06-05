@@ -9,9 +9,6 @@ env:
   matrix:
     - TRAVIS_EMPTY_JOB_WORKAROUND=true
 
-env:
-  - NODE_VERSION="0.12"
-
 matrix:
   exclude:
     - env: TRAVIS_EMPTY_JOB_WORKAROUND=true
@@ -20,11 +17,6 @@ matrix:
       compiler: clang
       node_js:
         - "stable"
-      addons:
-        apt:
-          packages:
-            - nodejs
-            - npm
       before_install:
         - set -e # Fail the whole script whenever any command fails
         - git submodule update --init --recursive
@@ -52,13 +44,6 @@ matrix:
             - nodejs
             - npm
 
-
-install:
-  - rm -rf ~/.nvm
-  - git clone https://github.com/creationix/nvm.git ~/.nvm
-  - source ~/.nvm/nvm.sh
-  - nvm install $NODE_VERSION
-  - node --version
 script:
   - cd ${TRAVIS_BUILD_DIR}
   - npm --version
