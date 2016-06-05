@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="AnitomyParse" errors="0" tests="1" failures="0" time="0.006" timestamp="2016-06-05T20:08:32">
+  <testcase classname="AnitomyParse" name="AnitomyParse" time="0.005"></testcase>
+</testsuite>
+</testsuites>

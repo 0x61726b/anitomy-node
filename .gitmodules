@@ -1,0 +1,4 @@
+[submodule "libs/anitomy"]
+	path = libs/anitomy
+	url = https://github.com/erengy/anitomy
+	branch = master
