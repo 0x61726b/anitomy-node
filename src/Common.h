@@ -24,8 +24,8 @@
 //----------------------------------------------------------------------------
 #define V8Value v8::Local<v8::Value>
 #define DEFINE_PROPERTY(name,value) v8::String::NewFromUtf8(v8::Isolate::GetCurrent(),name),value
-#define PersistentValue Nan::Persistent<v8::Value, v8::CopyablePersistentTraits<v8::Value> >
-#define PersistentObject Nan::Persistent<v8::Object, v8::CopyablePersistentTraits<v8::Object> >
-#define PersistentFunction Nan::Persistent<v8::Function, v8::CopyablePersistentTraits<v8::Function> >
+#define PersistentValue Nan::Persistent<v8::Value, Nan::CopyablePersistentTraits<v8::Value> >
+#define PersistentObject Nan::Persistent<v8::Object, Nan::CopyablePersistentTraits<v8::Object> >
+#define PersistentFunction Nan::Persistent<v8::Function, Nan::CopyablePersistentTraits<v8::Function> >
 //----------------------------------------------------------------------------
 #endif

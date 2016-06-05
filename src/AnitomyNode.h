@@ -26,8 +26,8 @@
 namespace AnitomyNode
 {
 	typedef std::map<std::string,
-		std::pair<Nan::Persistent<v8::Object,v8::CopyablePersistentTraits<v8::Object>>,
-		Nan::Persistent<v8::Function,v8::CopyablePersistentTraits<v8::Function>> >> CallbackMap;
+		std::pair<Nan::Persistent<v8::Object,Nan::CopyablePersistentTraits<v8::Object> >,
+		Nan::Persistent<v8::Function,Nan::CopyablePersistentTraits<v8::Function> > > > CallbackMap;
 
 	class AnitomyNode : public Nan::ObjectWrap
 	{
