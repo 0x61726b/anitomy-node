@@ -33,7 +33,6 @@ matrix:
 
 
 script:
-  - make
   - cd ${TRAVIS_BUILD_DIR}
   - npm --version
   - node --version
