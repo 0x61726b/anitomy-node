@@ -1,0 +1,43 @@
+language: cpp
+os: linux
+
+
+git:
+  submodules: false
+
+env:
+  matrix:
+    - TRAVIS_EMPTY_JOB_WORKAROUND=true
+
+matrix:
+  exclude:
+    - env: TRAVIS_EMPTY_JOB_WORKAROUND=true
+  include:
+    - os: osx
+      compiler: clang
+      sudo: false
+      before_install:
+        - set -e # Fail the whole script whenever any command fails
+        - git submodule update --init --recursive
+      install:
+        - |
+          if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
+            CMAKE_URL="http://www.cmake.org/files/v3.3/cmake-3.3.2-Linux-x86_64.tar.gz"
+            mkdir cmake && travis_retry wget --no-check-certificate --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake
+            export PATH=${pwd}/cmake/bin:${PATH}
+            if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
+          else
+            brew install cmake
+          fi
+
+
+
+script:
+  - make
+  - cd ${TRAVIS_BUILD_DIR}
+  - npm --version
+  - node --version
+  - npm install
+  - npm run conf
+  - npm run rebuild
+  - npm test
