@@ -15,7 +15,13 @@ matrix:
   include:
     - os: osx
       compiler: clang
-      sudo: false
+      node_js:
+        - "stable"
+      addons:
+        apt:
+          packages:
+            - nodejs
+            - npm
       before_install:
         - set -e # Fail the whole script whenever any command fails
         - git submodule update --init --recursive
