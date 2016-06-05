@@ -1,4 +1,5 @@
-#Anitomy Node
+[![Build Status](https://travis-ci.org/arkenthera/anitomy-node.svg?branch=master)](https://travis-ci.org/arkenthera/anitomy-node)
+
 
 ```npm install anitomy-node ```
 
