@@ -1,2 +1,2 @@
-var MediaDetect = require('bindings')('AnitomyNode').Root;
+var MediaDetect = require('bindings')('AnitomyNode');
 module.exports = MediaDetect;
